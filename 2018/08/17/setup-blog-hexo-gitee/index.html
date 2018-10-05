@@ -126,7 +126,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.ruokiy.com/2018/08/17/setup-blog-hexo-gitee/1.png">
 <meta property="og:image" content="http://www.ruokiy.com/2018/08/17/setup-blog-hexo-gitee/2.png">
-<meta property="og:updated_time" content="2018-10-05T02:47:11.880Z">
+<meta property="og:updated_time" content="2018-10-05T02:50:09.926Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+Gitee(码云)搭建静态博客网站">
 <meta name="twitter:description" content="直接注册和使用当下比较流行的博客网站比如csdn, oschina, 博客园等等，觉得不是自己专属，而且还有很多广告。选择一款开源或免费的CMS(内容管理系统)，自己买云主机和域名搭建博客，费钱又费时。有时我们只是希望有一个功能不太复杂，自己专属的或者看起来自己专属的（至少没有一堆广告）博客网站来写写和分享自己的文章。不需要花费太多的时间和钱，除非你的博客和文章已经足够热门。基于以上的期望，本文将">
@@ -412,7 +412,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-05 10:47:11" itemprop="dateModified" datetime="2018-10-05T10:47:11+08:00">2018-10-05</time>
+                <time title="修改时间：2018-10-05 10:50:09" itemprop="dateModified" datetime="2018-10-05T10:50:09+08:00">2018-10-05</time>
               
             
           </span>
@@ -450,7 +450,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">5.7k</span>
+                <span title="本文字数">5.6k</span>
               
 
               
@@ -645,9 +645,11 @@
 <li><p>在“应用配置”中添加一下配置</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr"> - type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">   repo:</span> <span class="attr">https://gitee.com/ruokiy/ruokiy.git</span></span><br><span class="line"><span class="attr">   branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>注意，最终deploy过程是将产生的静态博客网站文件提交到新创建的Git代码仓库的master分支上，所以做deploy的机子上需要能够写访问Git代码仓库。这里是通过https协议访问Git代码仓库的，所以你需要在deploy的机子上，也就是装有Git客户端的机子上设置以下的Git配置：</p>
-<figure class="highlight plain"><figcaption><span>config --global credential.helper store```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">   &gt; 尝试手动克隆一次代码仓库，根据提示输入用户名和密码，这样你的用户名和密码就会被缓存到机子上了。之后的访问都不要用户名和密码了。</span><br><span class="line"></span><br><span class="line">4. 在博客应用的根目录执行以下命令完成静态博客文件的上传</span><br><span class="line"></span><br><span class="line">    ```bash</span><br><span class="line">    hexo clean</span><br><span class="line">    hexo deploy</span><br></pre></td></tr></table></figure>
+<p>注意，最终deploy过程是将产生的静态博客网站文件提交到新创建的Git代码仓库的master分支上，所以做deploy的机子上需要能够写访问Git代码仓库。这里是通过https协议访问Git代码仓库的，所以你需要在deploy的机子上，也就是装有Git客户端的机子上设置以下的Git配置：<br>git config –global credential.helper store<br>尝试手动克隆一次代码仓库，根据提示输入用户名和密码，这样你的用户名和密码就会被缓存到机子上了。之后的访问都不要用户名和密码了。</p>
 </blockquote>
+</li>
+<li><p>在博客应用的根目录执行以下命令完成静态博客文件的上传</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>如下图，在码云上点击刚创建的代码仓库页面，点击菜单“Service|Gitee Pages”，在左侧选择“master”分支，点击“create”按钮</p>
  <div align="center"><br> <img src="/2018/08/17/setup-blog-hexo-gitee/2.png"><br> </div>
