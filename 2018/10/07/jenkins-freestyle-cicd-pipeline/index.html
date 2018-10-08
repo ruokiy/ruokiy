@@ -128,7 +128,8 @@
 <meta property="og:image" content="http://www.ruokiy.com/2018/10/07/jenkins-freestyle-cicd-pipeline/3.png">
 <meta property="og:image" content="http://www.ruokiy.com/2018/10/07/jenkins-freestyle-cicd-pipeline/1.png">
 <meta property="og:image" content="http://www.ruokiy.com/2018/10/07/jenkins-freestyle-cicd-pipeline/4.png">
-<meta property="og:updated_time" content="2018-10-07T14:07:44.991Z">
+<meta property="og:image" content="http://www.ruokiy.com/2018/10/07/jenkins-freestyle-cicd-pipeline/5.png">
+<meta property="og:updated_time" content="2018-10-08T02:31:07.964Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【原】基于Jenkins Freestyle Job构建CI&#x2F;CD流水线">
 <meta name="twitter:description" content="可能有人会问：“现在流行的是Jenkins Pipeline 2.0(Jenkinsfile)，所有人都在谈论和使用, 为什么还在用Freestyle Job, 是不是太low了！”。的确，Jenkins Pipeline 2.0现在很流行，几乎就等同于Jenkins平台上构建CI/CD流水线的标准，如果你不使用Jenkins Pipeline 2.0，那么就等于不懂CI/CD。我承认Jenkin">
@@ -401,6 +402,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-10-08 10:31:07" itemprop="dateModified" datetime="2018-10-08T10:31:07+08:00">2018-10-08</time>
+              
+            
           </span>
 
           
@@ -436,7 +453,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">4.7k</span>
+                <span title="本文字数">5k</span>
               
 
               
@@ -450,7 +467,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">4 分钟</span>
+                <span title="阅读时长">5 分钟</span>
               
             </div>
           
@@ -552,6 +569,22 @@
 <li><p>从上游作业（Job）拷贝流水线状态文件；</p>
 </li>
 <li><p>将状态文件加载为当前作业（Job）的环境变量。</p>
+</li>
+</ol>
+<h2 id="如何提升（Promote）阶段（Phase）或任务（Task）"><a href="#如何提升（Promote）阶段（Phase）或任务（Task）" class="headerlink" title="如何提升（Promote）阶段（Phase）或任务（Task）"></a>如何提升（Promote）阶段（Phase）或任务（Task）</h2><p>下图展示了如何提升（Promote）阶段（Phase）或任务（Task），也就是Jenkins作业（Job）：</p>
+<div align="center"><br><img src="/2018/10/07/jenkins-freestyle-cicd-pipeline/5.png"><br></div>
+
+<p>步骤的一些说明：</p>
+<ol>
+<li><p>在当前的流水线实例中打开上游作业（Job）的构建（Build）页面，点击左侧链接“Promotions Status”；</p>
+</li>
+<li><p>只有在“Approvers”列表里的用户有权手动批准提升（Promotion）；</p>
+</li>
+<li><p>点击“Approve”按钮触发提升（Promotion）；</p>
+</li>
+<li><p>Jenkins管理员有权限强制提升（Promotion）；</p>
+</li>
+<li><p>通过点击“Re-execute promotion”可重复提升（Promote）当前的作业（Job）。</p>
 </li>
 </ol>
 <h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>每一种方法有它的优点，必定也有它的缺点，没有一种方法是银弹，可以解决一切问题，打败天下无敌手。是否使用它，就要自己去权衡：是它的优点给你带来了更多，还是它的缺点是当前的最大障碍。这种方法的缺点大致如下：</p>
@@ -763,7 +796,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一个典型的CI-CD流水线"><span class="nav-number">1.</span> <span class="nav-text">一个典型的CI/CD流水线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在Jenkins上实现这个CI-CD流水线"><span class="nav-number">2.</span> <span class="nav-text">在Jenkins上实现这个CI/CD流水线</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Jenkins和必要的插件"><span class="nav-number">2.1.</span> <span class="nav-text">Jenkins和必要的插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jenkins-Job配置"><span class="nav-number">2.2.</span> <span class="nav-text">Jenkins Job配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结束语"><span class="nav-number">3.</span> <span class="nav-text">结束语</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一个典型的CI-CD流水线"><span class="nav-number">1.</span> <span class="nav-text">一个典型的CI/CD流水线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在Jenkins上实现这个CI-CD流水线"><span class="nav-number">2.</span> <span class="nav-text">在Jenkins上实现这个CI/CD流水线</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Jenkins和必要的插件"><span class="nav-number">2.1.</span> <span class="nav-text">Jenkins和必要的插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jenkins-Job配置"><span class="nav-number">2.2.</span> <span class="nav-text">Jenkins Job配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何提升（Promote）阶段（Phase）或任务（Task）"><span class="nav-number">2.3.</span> <span class="nav-text">如何提升（Promote）阶段（Phase）或任务（Task）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结束语"><span class="nav-number">3.</span> <span class="nav-text">结束语</span></a></li></ol></div>
             
 
           </div>
@@ -797,7 +830,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">10k</span>
+    <span title="站点总字数">11k</span>
   
 
   
@@ -808,7 +841,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">9 分钟</span>
+    <span title="站点阅读时长">10 分钟</span>
   
 </div>
 
