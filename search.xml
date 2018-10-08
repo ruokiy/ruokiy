@@ -19,15 +19,4 @@
         <tag>gitee</tag>
       </tags>
   </entry>
-  <entry>
-    <title><![CDATA[k8s平台私有部署]]></title>
-    <url>%2F2018%2F08%2F17%2Fk8s-onpremise-deploy-design%2F</url>
-    <content type="text"><![CDATA[k8s平台私有部署架构]]></content>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>CI/CD</tag>
-        <tag>Container</tag>
-        <tag>Kubernets(k8s)</tag>
-      </tags>
-  </entry>
 </search>
